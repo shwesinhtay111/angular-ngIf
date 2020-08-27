@@ -1,3 +1,82 @@
+ngIf
+=======
+-[hidden]='false' : simply hides the element
+
+-*ngIf='false' : removes the element completely from the DOM
+
+-using the Logical NOT (!)
+
+
+ngIf Syntax -->
+============
+<p *ngIf="condition">
+
+    content to render, when the condition is true 
+    
+</p>
+=====================================================
+<p *ngIf="!condition">
+
+    content to render, when the condition is false
+    
+</p>
+
+
+ngIf else syntax-->
+====================
+<div *ngIf="condition; else elseBlock">
+
+    content to render, when the condition is true 
+    
+</div>
+ 
+<ng-template #elseBlock>
+
+    content to render, when the condition is false 
+    
+</ng-template>
+=====================================================
+
+ngIf then else Syntax
+=======================
+<div *ngIf="condition; then thenBlock else elseBlock"> 
+
+    This content is not shown
+    
+</div>
+ 
+<ng-template #thenBlock>
+
+    content to render when the condition is true.
+    
+</ng-template>
+ 
+<ng-template #elseBlock>
+
+    content to render when condition is false.
+    
+</ng-template>
+
+===========================================================
+ 
+ 
+In app.module.ts
+======================
+import { FormsModule } from '@angular/forms';
+
+
+@NgModule({
+
+
+imports: [
+
+
+     FormsModule    
+     
+]
+
+
+
 # NgifTest
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.4.
